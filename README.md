@@ -2,7 +2,7 @@
 
 ![Baby Ostrich](assets/backbone-ostrich.jpg)
 
-###Visual Aids
+##Visual Aids
 
 ![BackBone Arch](assets/BackboneArch.jpg)
 ![](assets/intro-model-view.svg)
@@ -10,7 +10,7 @@
 ![](assets/intro-views.svg)
 
 
-####Dependencies:
+##Dependencies:
 http://underscorejs.org/
 core jQuery library
 
@@ -20,7 +20,7 @@ underscore.js
 backbone
 
 
-####Similarities/differences to other types of tech we've studied.
+##Similarities/differences to other types of tech we've studied.
 
 ######Differences:
 Backbone has a collections component, and collections are a group of models. Behind the scenes, collections are really just JavaScript arrays. There's also the Backbone events component. This component allows us to bind custom JavaScript events to our code.
@@ -29,7 +29,7 @@ Now Backbone sync is the last component. It's mostly used to help Backbone commu
 
 
 
-####Why would someone choose to use Backbone?
+##Why would someone choose to use Backbone?
 Freedom!!! It does some things, but it's not overly opinionated
 
 #####Pros
@@ -49,7 +49,7 @@ Freedom!!! It does some things, but it's not overly opinionated
 - easy to leak memory when writing apps
 
 
-####important stuff
+##Using Backbone
 - initialize method - internal method that executes code every time a new instance of a component is created --> watching for model changes
   - we can use an instance's attr in our web app however we want to
 - get method - gets or finds a specific property of our model to use as we see fit
@@ -65,19 +65,19 @@ collection is a group of model instances
     - can be a parameter of the collection
     - or can be added individually w/ internal .add method
 
-#####add student
+#####Add Student
 - create new collection files
 - in the model, create a new initialize function that uses this.on to watch for a change and send a message
 - create the instances in app.js
-  - new app.Flower
+  - new app.Student
   - added the attributes appropriately
 - create an instance of the collection that references the model instances that you want in it!!!
-  - new app.EuropeanFlower
+  - new app.GroupOfStudents
 - use .set to change one of the instances
 - console.log the whole collection with .toJSON()
 
 ####Views
-- how you get info from your model onto the page (duh)
+- how you get info from your model onto the page
 - we will create collections of views as well as of models
 - views will communicate w/ each other as they do their jobs
 - what html elements will be displayed
@@ -85,6 +85,7 @@ collection is a group of model instances
   - attributes are the tagName and className for the html element that the view will be
   - automatically defined as a div if we don't give it a tagName
 - on the index page, you use a script tag to enclose your code
+
 ```
 <script id="flowerElement" type="text/template">
   <a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class="image" /></a>
@@ -143,6 +144,3 @@ $("#allFlowers").html(flowerGroupView.render().el);
 - views have a small event element that can be used for DOM manipulation
   - object inside of the singleFlowerView
   - functions then defined that do something for DOM manipulation, like changing a class or something
-
-####teaching techniques
-Push ups, Jumping jacks after every major checkpoint
