@@ -58,7 +58,7 @@ collection is a group of model instances
     - can be a parameter of the collection
     - or can be added individually w/ internal .add method
 
-###add flower challenge
+#####add flower challenge
 - create new collection files
 - in the model, create a new initialize function that uses this.on to watch for a change and send a message
 - create the instances in app.js
@@ -69,7 +69,7 @@ collection is a group of model instances
 - use .set to change one of the instances
 - console.log the whole collection with .toJSON()
 
-####backbone views
+####Views
 - how you get info from your model onto the page (duh)
 - we will create collections of views as well as of models
 - views will communicate w/ each other as they do their jobs
@@ -128,8 +128,11 @@ $("#allFlowers").html(flowerGroupView.render().el);
 ```
 - .el makes sure the model data gets loaded into the collection view's root element
 
-
-
+####Events
+- component also mixed into other ones
+- views have a small event element that can be used for DOM manipulation
+  - object inside of the singleFlowerView
+  - functions then defined that do something for DOM manipulation, like changing a class or something
 
 ####teaching techniques
 Push ups, Jumping jacks after every major checkpoint

@@ -1,7 +1,9 @@
+var app = app || {};
 
 // Students Collection View
-var MovieTable = Backbone.View.extend({
-  _movieRowViews: [],
+app.allStudentsTableView = Backbone.View.extend({
+  _studentRowViews: [],
+
   tagName: 'table',
   template: null,
   sortUpIcon: 'ui-icon-triangle-1-n',
@@ -9,10 +11,12 @@ var MovieTable = Backbone.View.extend({
   events: {
      "click th":                   "headerClick"
   },
+
   initialize: function() {
-     this.template = _.template( $('#movie-table').html() );
+     this.template = _.template( $('#student-table').html() );
      this.listenTo(this.collection, "sort", this.updateTable);
   },
+
   render: function() {
      this.$el.html(this.template());
      // Setup the sort indicators
@@ -27,6 +31,12 @@ var MovieTable = Backbone.View.extend({
      this.updateTable();
      return this;
   },
+
+  addStudent: function(student) {
+    var studentView = new app.singleStudentRowView ({model: student});
+    this.$el.append(studentView.render().el);
+  },
+
   headerClick: function( e ) {
      var $el = $(e.currentTarget),
          ns = $el.attr('column'),
@@ -42,17 +52,23 @@ var MovieTable = Backbone.View.extend({
      } else {
         $el.find('span').removeClass('icon-none').addClass(this.sortDnIcon);
      }
-     this.collection.sortMovies(ns);
+     this.collection.sortStudents(ns);
   },
+
   updateTable: function () {
      var ref = this.collection,
          $table;
-     _.invoke(this._movieRowViews, 'remove');
+     _.invoke(this._singleStudentRowViews, 'remove');
+
      $table = this.$('tbody');
-     this._movieRowViews = this.collection.map(
+
+     this._singleStudentRowViews = this.collection.map(
            function ( obj ) {
-                 var v = new MovieRow({  model: ref.get(obj) });
+
+                 var v = new app.singleStudentRowView({  model: ref.get(obj) });
+
                  $table.append(v.render().$el);
+
                  return v;
              });
   }

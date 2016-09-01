@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Students Backbone App</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
   </head>
 
   <body>
@@ -19,14 +21,25 @@
 
       <div id="copy"></div>
 
+      <div id='new-student-form'>
+        <form class="" action="index.html" method="post">
+
+          Enter Student First Name: <input class='first-name-field'>
+          Enter Student Last Name: <input class='last-name-field'>
+          <input type="button" name="new-student-button" value="submit">
+
+        </form>
+
+      </div>
+
     </div>
 
     <script id="student-table" type="text/template">
 
       <thead>
         <tr>
-          <th column="firstName"><div>First Name</div></th>
-          <th column="lastName"><div>Last Name</div></th>
+          <th column="first_name"><div>First Name</div></th>
+          <th column="last_name"><div>Last Name</div></th>
           <th column="image"><div>Image</div></th>
         </tr>
       </thead>
@@ -43,9 +56,16 @@
       <td><div><%= image %></div></td>
     </script>
 
+    <!-- <script id='form' type="text/template">
+      Enter Student First Name: <input class='first-name-field'>
+      Enter Student Last Name: <input class='last-name-field'>
+      <p>The name you entered is <span class="nameText"></span></p>
+    </script> -->
+
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/underscore.js"></script>
     <script src="js/libs/backbone.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/models/singleStudentModel.js"></script>
     <script src="js/views/singleStudentView.js"></script>
     <script src="js/views/allStudentsView.js"></script>
