@@ -13,7 +13,15 @@ app.singleStudentRowView = Backbone.View.extend({
   render: function() {
      this.$el.html( this.template( this.model.toJSON()) );
      return this;
-  }
+  },
 
+  events: {
+    "submit newStudent":  "newStudent"
+  },
+
+  newStudent: function(e) {
+    var newStudent = new singleStudentModel({first_name: $('.first-name-field').val(), last_name: $('.last-name-field').val()});
+    $("#allStudents").append(this.$el);
+  }
 
 });

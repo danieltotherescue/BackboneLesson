@@ -26,7 +26,7 @@
 
           Enter Student First Name: <input class='first-name-field'>
           Enter Student Last Name: <input class='last-name-field'>
-          <input type="button" name="new-student-button" value="submit">
+          <input type="button" id='submit' name="submit newStudent" value="submit">
 
         </form>
 
@@ -53,7 +53,7 @@
     <script id="student-row" type="text/template">
       <td><div><%= first_name %></div></td>
       <td><div><%= last_name %></div></td>
-      <td><div><%= image %></div></td>
+      <td><img src='<%= image %>'></div></td>
     </script>
 
     <!-- <script id='form' type="text/template">
