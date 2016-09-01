@@ -29,7 +29,7 @@ Now Backbone sync is the last component. It's mostly used to help Backbone commu
 
 
 
-##Why would someone choose to use Backbone?
+###Why would someone choose to use Backbone?
 Freedom!!! It does some things, but it's not overly opinionated
 
 #####Pros
@@ -56,7 +56,7 @@ Freedom!!! It does some things, but it's not overly opinionated
 - set method - changes already existing model properties or adds new ones after creation of the instance
 - on method - triggers actions that should happen when a model changes
 
-collection is a group of model instances
+###### A collection is a group of model instances
   - powerful and contain a lot of built in functionality
   - you can add and remove instances
   - <strong>must know what model it's based on</strong>
