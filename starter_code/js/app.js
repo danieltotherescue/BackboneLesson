@@ -14,20 +14,25 @@ var daniel = new app.singleStudent({
 });
 
 var studentGroup = new app.StudentsCollection([
-  taylor, daniel
+  taylor, daniel, emily
 ]);
 
-studentGroup.add(emily);
-
-studentGroup.remove(taylor);
+// studentGroup.add(emily);
+//
+// studentGroup.remove(taylor);
 
 console.log(studentGroup.toJSON());
 
-//
-// var flowerGroupView = new app.allStudentsView({ collection: flowerGroup});
-//
-// $("#allStudents").html(flowerGroupView.render().el);
-//
+
+var studentGroupView = new app.allStudentsTableView({ collection: studentGroup});
+
+$("#allStudents").html(studentGroupView.render().el);
+
+var newStudent = new app.singleStudent({first_name: $('.first-name-field').val(), last_name: $('.last-name-field').val()})
+
+// var newStudentView = new app.singleStudentRowView({model: })
+// var newStudentFormView = $('#form')
+// $('#new-student-form').html(newStudentFormView.render().el)
 // var flowerRouter = new app.Router();
 //
 // Backbone.history.start();

@@ -1,9 +1,10 @@
+var app = app || {};
 
-var Student = Backbone.View.extend({
+app.singleStudentRowView = Backbone.View.extend({
 
   tagName: 'tr',
   template: null,
-  className: 'studentListItem'
+  className: 'studentListItem',
 
   initialize: function() {
      this.template = _.template( $('#student-row').html() );
@@ -13,5 +14,6 @@ var Student = Backbone.View.extend({
      this.$el.html( this.template( this.model.toJSON()) );
      return this;
   }
+
 
 });
