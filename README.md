@@ -41,6 +41,22 @@ Any code files that are needed should be included in this repo. This includes th
 ####Why would someone choose to use Backbone?
 
 
+#####Pros
+
+- if you want to clean up messy jQuery code
+- small - more of a library than a framework
+- good for refactoring old code, cleaning things up and getting more modularity
+- a lot more control over performance, particularly in mobile scenarios
+- if you’re really comfortable in JS and don’t want a framework in your way
+- The single most important thing that Backbone can help you with is keeping your business logic separate from your user interface. When the two are entangled, change is hard; when logic doesn't depend on UI, your interface becomes easier to work with.
+
+#####Cons
+
+- productivity - doesn’t help you as much or write as much code for you
+- you will have more code to write b/c of no 2 way data binding
+- architecture can be unclear at times
+- easy to leak memory when writing apps
+
 
 ####important stuff
 - initialize method - internal method that executes code every time a new instance of a component is created --> watching for model changes
@@ -92,7 +108,7 @@ collection is a group of model instances
   - type is text/template --> we DON'T want it to execute as JS
   - we use <%= %> to reference our model properties, like links, image, name, price, etc.
 - template method: we insert a template line of code into our view definition
-  - ```
+  ```
   template: _.template( $('#flowerElement').html() )
   ```
 - under this in our view, we will include a render functionality
@@ -103,6 +119,7 @@ collection is a group of model instances
       - JSON-like JS object
       - looking for model data but doesn't know which one to look at
     - $el, or 'L' is a jQuery ref to the element, which makes it so we can apply jQuery methods
+
 ```
 render: function() {
   var flowerTemplate = this.template(this.model.toJSON());
@@ -136,19 +153,3 @@ $("#allFlowers").html(flowerGroupView.render().el);
 
 ####teaching techniques
 Push ups, Jumping jacks after every major checkpoint
-
-####Pros
-
-- if you want to clean up messy jQuery code
-- small - more of a library than a framework
-- good for refactoring old code, cleaning things up and getting more modularity
-- a lot more control over performance, particularly in mobile scenarios
-- if you’re really comfortable in JS and don’t want a framework in your way
-- The single most important thing that Backbone can help you with is keeping your business logic separate from your user interface. When the two are entangled, change is hard; when logic doesn't depend on UI, your interface becomes easier to work with.
-
-####Cons
-
-- productivity - doesn’t help you as much or write as much code for you
-- you will have more code to write b/c of no 2 way data binding
-- architecture can be unclear at times
-- easy to leak memory when writing apps
