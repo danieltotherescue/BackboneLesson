@@ -122,6 +122,7 @@ addFlower: function(flower) {
    this.$el.append(flowerView.render().el);
 }
 ```
+
 ```
 $("#allFlowers").html(flowerGroupView.render().el);
 ```
