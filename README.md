@@ -2,9 +2,6 @@
 
 ![Baby Ostrich](assets/backbone-ostrich.jpg)
 
-##Task:
-Backbone groups needs to create a client-side only single page application (no server-side) that has a form for collecting data into a list of rows and columns. The user should be able to sort the collection by clicking on the column headers. You do not need to persist data.
-
 ###Visual Aids
 
 ![BackBone Arch](assets/BackboneArch.jpg)
@@ -30,9 +27,6 @@ Backbone has a collections component, and collections are a group of models. Beh
 
 Now Backbone sync is the last component. It's mostly used to help Backbone communicate with server side technologies like databases. We won't be needing this today because we are only building a client-side app.
 
-
-
-Any code files that are needed should be included in this repo. This includes things like Gemfile or package.json!
 
 
 ####Why would someone choose to use Backbone?
