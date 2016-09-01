@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Students Backbone App</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="site">
+
+      <!-- <div class="logo">
+        <img src="images/site/logo.png" width="207" height="124" alt="Awesome Students" />
+      </div> -->
+
+      <div id="allStudents"></div>
+
+      <div id="copy"></div>
+
+    </div>
+
+    <script id="student-table" type="text/template">
+
+      <thead>
+        <tr>
+          <th column="firstName"><div>First Name</div></th>
+          <th column="lastName"><div>Last Name</div></th>
+          <th column="image"><div>Image</div></th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+      </tbody>
+
+    </script>
+
+    <script id="student-row" type="text/template">
+      <td><div><%= first_name %></div></td>
+      <td><div><%= last_name %></div></td>
+      <td><div><%= image %></div></td>
+    </script>
+
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/underscore.js"></script>
+    <script src="js/libs/backbone.js"></script>
+    <script src="js/models/singleStudentModel.js"></script>
+    <script src="js/views/singleStudentView.js"></script>
+    <script src="js/views/allStudentsView.js"></script>
+    <script src="js/collections/allStudents.js"></script>
+    <script src="js/routes/router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>
