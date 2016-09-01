@@ -24,7 +24,7 @@ http://underscorejs.org/
 ######Differences:
 Backbone has a collections component, and collections are a group of models. Behind the scenes, collections are really just JavaScript arrays. There's also the Backbone events component. This component allows us to bind custom JavaScript events to our code.
 
-Now Backbone sync is the last component. It's mostly used to help Backbone communicate with server side technologies like databases.
+Now Backbone sync is the last component. It's mostly used to help Backbone communicate with server side technologies like databases. We won't be needing this today because we are only building a client-side app. 
 
 
 
