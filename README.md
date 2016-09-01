@@ -105,9 +105,11 @@ collection is a group of model instances
   - type is text/template --> we DON'T want it to execute as JS
   - we use <%= %> to reference our model properties, like links, image, name, price, etc.
 - template method: we insert a template line of code into our view definition
+
   ```
   template: _.template( $('#flowerElement').html() )
   ```
+
 - under this in our view, we will include a render functionality
   - looks at logic defined so framework
     - tag name, class name, template property
