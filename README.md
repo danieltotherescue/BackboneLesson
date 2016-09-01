@@ -6,14 +6,11 @@
 Backbone groups needs to create a client-side only single page application (no server-side) that has a form for collecting data into a list of rows and columns. The user should be able to sort the collection by clicking on the column headers. You do not need to persist data.
 
 ###Visual Aids
-screen shots,
-gifs,
-diagrams,
-other tools that will help make the guide as useful as possible
 
-(but don't waste time on styling, this project is about content, not style).
-
-make yours more approachable for WDI students - ASSUME NOTHING
+![BackBone Arch](assets/BackboneArch.jpg)
+![](assets/intro-model-view.svg)
+![](assets/intro-collections.svg)
+![](assets/intro-views.svg)
 
 
 ####Dependencies:
@@ -39,7 +36,7 @@ Any code files that are needed should be included in this repo. This includes th
 
 
 ####Why would someone choose to use Backbone?
-
+Freedom!!! It does some things, but it's not overly opinionated
 
 
 ####important stuff
@@ -58,7 +55,7 @@ collection is a group of model instances
     - can be a parameter of the collection
     - or can be added individually w/ internal .add method
 
-#####add flower challenge
+#####add student
 - create new collection files
 - in the model, create a new initialize function that uses this.on to watch for a change and send a message
 - create the instances in app.js
